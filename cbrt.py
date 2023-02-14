@@ -4,12 +4,15 @@ def cbrt(x):
     
     
     g = 3
-    for i in range(10):
+    k = 0
+    for i in range(100):
         g = (1/3)*(2*g+x/(g*g))
-        k=g
-        if(abs(k-g)<10e-8):
+        
+        
+        print("cuberoot after %s iteration is %s" %(i,k))
+        if(abs(k-g)<10e-14):
             break
+        k=g
         
-        
-    print(g)
+    return g
     
